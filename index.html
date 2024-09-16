@@ -1,100 +1,141 @@
-Here is an HTML template for your CV based on the provided content. It contains sections for "Projects," "Experiences," "Education," and "Skills" without any CSS or JavaScript.
-
-```html
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV</title>
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
 
-    <header>
-        <h1>Curriculum Vitae</h1>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <!-- Navigation Bar at the Top -->
+    <nav class="bg-gray-800 text-white py-4 px-8 flex justify-between items-center">
+        <div class="text-2xl font-bold">
+            <a href="./index.html" class="hover:text-indigo-400">My Portfolio</a>
+        </div>
+        <div class="space-x-6">
+            <a href="./projects.html" class="hover:text-indigo-400">Projects</a>
+            <a href="./experiences.html" class="hover:text-indigo-400">Experiences</a>
+            <a href="./education.html" class="hover:text-indigo-400">Education</a>
+            <a href="./skills.html" class="hover:text-indigo-400">Skills</a>
+        </div>
+    </nav>
+
+    <!-- Profile Header Section -->
+    <header class="bg-indigo-600 text-white p-8 text-center relative">
+        <div class="relative">
+            <!-- Profile Image -->
+            <div class="rounded-full overflow-hidden border-4 border-white w-40 h-40 mx-auto mb-4">
+                <img src="your-image.jpg" class="w-full h-full object-cover">
+            </div>
+        </div>
+        <h1 class="text-4xl font-bold mb-2">Rimsha Aamir</h1>
+        <p class="text-lg max-w-2xl mx-auto">
+          Hi there! I'm a passionate developer and content creator with a diverse range of projects and experiences. Here's a glimpse into my work and background.
+        </p>
+
+        <!-- Social Media Icons -->
+        <div class="mt-4 flex justify-center space-x-4">
+            <a href="https://github.com/RimshaAamir" target="_blank" class="text-white hover:text-gray-300 text-3xl">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rimsha-aamir-345620260/" target="_blank" class="text-white hover:text-gray-300 text-3xl">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:bss21097@itu.edu.pk" class="text-white hover:text-gray-300 text-3xl">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
     </header>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <strong>NextJs | React | Tailwind</strong> (2024 - In Progress)<br>
-                Did multiple projects during internship: Weather App, Next dashboard, ToDo App. More are in progress.
-            </li>
-            <li>
-                <strong>Solar-Lite</strong> (MERN, 2024 - In Progress)<br>
-                Helped develop an entrepreneurial idea providing customizable green energy solutions with a web application.
-            </li>
-            <li>
-                <strong>Flutter Full Stack Application</strong> (2023)<br>
-                Developed a Flutter app "Here you grow" during 4th semester. Learned Flutter, Dart, Firebase, NoSQL, and chat app functionality.
-            </li>
-            <li>
-                <strong>Shogi</strong> (C++, OOP, BGI 2010, 2023)<br>
-                Created a chess shogi game, focusing on abstraction and class-function interactions in OOP.
-            </li>
-            <li>
-                <strong>Snake Game</strong> (C++, Structs, 2022)<br>
-                Created a multiplayer snake game, learning the fundamentals of programming.
-            </li>
-            <li>
-                <strong>Chess</strong> (C++, Functions, 2022)<br>
-                Completed a Chess Game using modular programming techniques in C++.
-            </li>
-            <li>
-                <strong>Monopoly</strong> (C++, Fundamentals, 2022)<br>
-                Developed a command-line based Monopoly game using C++ to reinforce fundamental programming concepts.
-            </li>
-            <li>
-                <strong>Tic Tac Toe</strong> (C++, JavaScript, Fundamentals, 2022)<br>
-                Developed a 2-player game in both C++ and JavaScript.
-            </li>
-        </ul>
+    <!-- Content Section -->
+    <section class="bg-gray-50 py-10 px-6">
+        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Hobbies Section -->
+            <div class="p-6 bg-white rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4 text-center">Hobbies</h2>
+                <div class="flex justify-center space-x-6">
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-pen-nib text-3xl"></i>
+                        <p>Writing</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-bicycle text-3xl"></i>
+                        <p>Cycling</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-futbol text-3xl"></i>
+                        <p>Football</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-film text-3xl"></i>
+                        <p>Movies</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-plane text-3xl"></i>
+                        <p>Travel</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <i class="fas fa-gamepad text-3xl"></i>
+                        <p>Games</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="p-6 bg-white rounded-lg shadow-md">
+                <h2 class="text-2xl font-bold mb-4 text-center">Skills</h2>
+                <div class="space-y-4">
+                    <div class="flex justify-between">
+                        <p>Photoshop</p>
+                        <div class="w-3/4 bg-gray-300 h-2 rounded-lg">
+                            <div class="bg-indigo-600 h-2 rounded-lg" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between">
+                        <p>PHP</p>
+                        <div class="w-3/4 bg-gray-300 h-2 rounded-lg">
+                            <div class="bg-indigo-600 h-2 rounded-lg" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between">
+                        <p>Web Design</p>
+                        <div class="w-3/4 bg-gray-300 h-2 rounded-lg">
+                            <div class="bg-indigo-600 h-2 rounded-lg" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between">
+                        <p>Web Development</p>
+                        <div class="w-3/4 bg-gray-300 h-2 rounded-lg">
+                            <div class="bg-indigo-600 h-2 rounded-lg" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="experiences">
-        <h2>Experiences</h2>
-        <ul>
-            <li>
-                <strong>Internship in Web Development</strong> (DeltaLabs, Jun 2024 - present)<br>
-                Developed and maintained web applications, improving skills in HTML, CSS, Tailwind, JavaScript, TypeScript, React, NextJs, and Postgres.
-            </li>
-            <li>
-                <strong>Freelancing</strong> (Pen Slinger, 2023 - present)<br>
-                Worked as a senior content writer after joining a US-based content writing company.
-            </li>
-        </ul>
-    </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <ul>
-            <li>
-                <strong>Bachelor of Computer Science</strong> (2021 - 2025)<br>
-                Information Technology University, Lahore, Pakistan.
-            </li>
-            <li>
-                <strong>FSc Pre-Engineering</strong> (2019 - 2021)<br>
-                Lahore College For Women University, Lahore, Pakistan.
-            </li>
-            <li>
-                <strong>Matriculation</strong> (2017 - 2019)<br>
-                Allied Schools, Lahore, Pakistan.
-            </li>
-        </ul>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Programming Languages: C++, Python, Dart, SQL, NoSQL, HTML, CSS, Tailwind, JavaScript, TypeScript, React, NextJs, Postgres, Ruby on Rails</li>
-            <li>Freelancing: Content Writing</li>
-            <li>Management and organization</li>
-        </ul>
-    </section>
+    <!-- Footer Section -->
+    <footer class="bg-indigo-600 text-white text-center py-6">
+        <p class="text-sm">&copy; 2024 My Portfolio | Made with passion and Tailwind CSS</p>
+    </footer>
 
 </body>
-</html>
-```
 
-You can simply copy this HTML code into a file and open it in a browser to view the formatted CV. The structure is simple and adheres to your request for no CSS or JavaScript.
+</html>
