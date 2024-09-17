@@ -2,62 +2,60 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="language.js"></script>
 </head>
 
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-900 font-sans">
 
     <!-- Navigation Bar at the Top -->
-    <nav class="bg-gray-800 text-white py-4 px-8 flex justify-between items-center">
+    <nav class="bg-[#33334d] text-white py-4 px-8 flex justify-between items-center">
         <div class="text-2xl font-bold">
-            <a href="./index.html" class="hover:text-indigo-400">My Portfolio</a>
+            <a href="./index.html" class="hover:text-[#b3b3cc] data-translate" data-translate-key="title">My Portfolio</a>
         </div>
         <div class="space-x-6">
-            <a href="./projects.html" class="hover:text-indigo-400">Projects</a>
-            <a href="./experiences.html" class="hover:text-indigo-400">Experiences</a>
-            <a href="./education.html" class="hover:text-indigo-400">Education</a>
-            <a href="./skills.html" class="hover:text-indigo-400">Skills</a>
+            <a href="./projects.html" class="hover:text-[#b3b3cc]" data-translate data-translate-key="projects">Projects</a>
+            <a href="./experiences.html" class="hover:text-[#b3b3cc]" data-translate data-translate-key="experiences">Experiences</a>
+            <a href="./education.html" class="hover:text-[#b3b3cc]" data-translate data-translate-key="education">Education</a>
+            <a href="./about.html" class="hover:text-[#b3b3cc]" data-translate data-translate-key="about">About Me</a>
+            <!-- Language Selection Dropdown -->
+            <select id="languageSelect" class="bg-[#47476b] text-white py-1 px-2 rounded">
+                <option value="en">English</option>
+                <option value="ar">العربية (Arabic)</option>
+                <option value="ur">اردو (Urdu)</option>
+                <option value="fr">Français (French)</option>
+            </select>
         </div>
     </nav>
 
     <!-- Profile Header Section -->
-    <header class="bg-indigo-600 text-white p-8 text-center relative">
-        <div class="relative">
+    <header class="bg-[#47476b] text-white p-8 relative">
+        <div class="container mx-auto flex items-center space-x-8">
             <!-- Profile Image -->
-            <div class="rounded-full overflow-hidden border-4 border-white w-40 h-40 mx-auto mb-4">
-                <img src="your-image.jpg" class="w-full h-full object-cover">
+            <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-white">
+                <img src="rim.jfif" class="w-full h-full object-cover">
+            </div>
+            <!-- Profile Content -->
+            <div>
+                <h1 class="text-4xl font-bold mb-2" data-translate data-translate-key="profileName">Rimsha Aamir</h1>
+                <p class="text-lg max-w-2xl" data-translate data-translate-key="profileIntro">
+                    Hi there! I'm a passionate developer and content creator with a diverse range of projects and experiences. Here's a glimpse into my work and background.
+                </p>
             </div>
         </div>
-        <h1 class="text-4xl font-bold mb-2">Rimsha Aamir</h1>
-        <p class="text-lg max-w-2xl mx-auto">
-          Hi there! I'm a passionate developer and content creator with a diverse range of projects and experiences. Here's a glimpse into my work and background.
-        </p>
-
-        <!-- Social Media Icons -->
-        <div class="mt-4 flex justify-center space-x-4">
-            <a href="https://github.com/RimshaAamir" target="_blank" class="text-white hover:text-gray-300 text-3xl">
+        <!-- Social Media Icons at the End -->
+        <div class="mt-6 flex justify-center space-x-4">
+            <a href="https://github.com/RimshaAamir" target="_blank" class="text-white hover:text-[#ccccff] text-3xl">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.linkedin.com/in/rimsha-aamir-345620260/" target="_blank" class="text-white hover:text-gray-300 text-3xl">
+            <a href="https://www.linkedin.com/in/rimsha-aamir-345620260/" target="_blank" class="text-white hover:text-[#ccccff] text-3xl">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="mailto:bss21097@itu.edu.pk" class="text-white hover:text-gray-300 text-3xl">
+            <a href="mailto:bss21097@itu.edu.pk" class="text-white hover:text-[#ccccff] text-3xl">
                 <i class="fas fa-envelope"></i>
             </a>
         </div>
@@ -68,61 +66,61 @@
         <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
             <!-- Hobbies Section -->
             <div class="p-6 bg-white rounded-lg shadow-md">
-                <h2 class="text-2xl font-bold mb-4 text-center">Hobbies</h2>
+                <h2 class="text-2xl font-bold mb-4 text-center" data-translate data-translate-key="hobbiesTitle">Hobbies</h2>
                 <div class="flex justify-center space-x-6">
                     <div class="flex flex-col items-center">
-                        <i class="fas fa-pen-nib text-3xl"></i>
-                        <p>Writing</p>
+                        <i class="fas fa-pen-nib text-3xl text-[#4d4d99]"></i>
+                        <p data-translate data-translate-key="hobbyWriting">Writing</p>
                     </div>
                     <div class="flex flex-col items-center">
-                        <i class="fas fa-bicycle text-3xl"></i>
-                        <p>Cycling</p>
+                        <i class="fas fa-bicycle text-3xl text-[#4d4d99]"></i>
+                        <p data-translate data-translate-key="hobbyCycling">Cycling</p>
                     </div>
                     <div class="flex flex-col items-center">
-                        <i class="fas fa-futbol text-3xl"></i>
-                        <p>Football</p>
+                        <i class="fas fa-futbol text-3xl text-[#4d4d99]"></i>
+                        <p data-translate data-translate-key="hobbyFootball">Football</p>
                     </div>
                     <div class="flex flex-col items-center">
-                        <i class="fas fa-film text-3xl"></i>
-                        <p>Movies</p>
+                        <i class="fas fa-film text-3xl text-[#4d4d99]"></i>
+                        <p data-translate data-translate-key="hobbyMovies">Movies</p>
                     </div>
                     <div class="flex flex-col items-center">
-                        <i class="fas fa-plane text-3xl"></i>
-                        <p>Travel</p>
+                        <i class="fas fa-plane text-3xl text-[#4d4d99]"></i>
+                        <p data-translate data-translate-key="hobbyTravel">Travel</p>
                     </div>
                     <div class="flex flex-col items-center">
-                        <i class="fas fa-gamepad text-3xl"></i>
-                        <p>Games</p>
+                        <i class="fas fa-gamepad text-3xl text-[#4d4d99]"></i>
+                        <p data-translate data-translate-key="hobbyGames">Games</p>
                     </div>
                 </div>
             </div>
 
             <!-- Skills Section -->
             <div class="p-6 bg-white rounded-lg shadow-md">
-                <h2 class="text-2xl font-bold mb-4 text-center">Skills</h2>
+                <h2 class="text-2xl font-bold mb-4 text-center" data-translate data-translate-key="skillsTitle">Skills</h2>
                 <div class="space-y-4">
                     <div class="flex justify-between">
-                        <p>Photoshop</p>
+                        <p data-translate data-translate-key="skillWriting">Content Writing</p>
                         <div class="w-3/4 bg-gray-300 h-2 rounded-lg">
-                            <div class="bg-indigo-600 h-2 rounded-lg" style="width: 80%;"></div>
+                            <div class="bg-[#6666b2] h-2 rounded-lg" style="width: 80%;"></div>
                         </div>
                     </div>
                     <div class="flex justify-between">
-                        <p>PHP</p>
+                        <p data-translate data-translate-key="skillSEO">SEO-Optimization</p>
                         <div class="w-3/4 bg-gray-300 h-2 rounded-lg">
-                            <div class="bg-indigo-600 h-2 rounded-lg" style="width: 70%;"></div>
+                            <div class="bg-[#6666b2] h-2 rounded-lg" style="width: 70%;"></div>
                         </div>
                     </div>
                     <div class="flex justify-between">
-                        <p>Web Design</p>
+                        <p data-translate data-translate-key="skillDesign">Web Design</p>
                         <div class="w-3/4 bg-gray-300 h-2 rounded-lg">
-                            <div class="bg-indigo-600 h-2 rounded-lg" style="width: 90%;"></div>
+                            <div class="bg-[#6666b2] h-2 rounded-lg" style="width: 90%;"></div>
                         </div>
                     </div>
                     <div class="flex justify-between">
-                        <p>Web Development</p>
+                        <p data-translate data-translate-key="skillDevelopment">Web Development</p>
                         <div class="w-3/4 bg-gray-300 h-2 rounded-lg">
-                            <div class="bg-indigo-600 h-2 rounded-lg" style="width: 85%;"></div>
+                            <div class="bg-[#6666b2] h-2 rounded-lg" style="width: 85%;"></div>
                         </div>
                     </div>
                 </div>
@@ -130,10 +128,9 @@
         </div>
     </section>
 
-
     <!-- Footer Section -->
-    <footer class="bg-indigo-600 text-white text-center py-6">
-        <p class="text-sm">&copy; 2024 My Portfolio | Made with passion and Tailwind CSS</p>
+    <footer class="bg-[#47476b] text-white text-center py-6">
+        <p class="text-sm" data-translate data-translate-key="footerText">&copy; 2024 My Portfolio | Made with passion and Tailwind CSS</p>
     </footer>
 
 </body>
