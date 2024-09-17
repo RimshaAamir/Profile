@@ -15,12 +15,15 @@
             <a href="./index.html" class="hover:text-[#b3b3cc]">My Portfolio</a>
         </div>
         <div class="space-x-6">
+            <!-- Home Link Always Visible -->
             <a href="./index.html" class="hover:text-[#b3b3cc]">Home</a>
-            <a href="./projects.html" class="hover:text-[#b3b3cc]">Projects</a>
-            <a href="./experiences.html" class="hover:text-[#b3b3cc]">Experiences</a>
-            <a href="./education.html" class="hover:text-[#b3b3cc]">Education</a>
             
-            
+            <!-- Other Links Hidden on Small Screens, Visible on Medium and Larger Screens -->
+            <div class="hidden md:inline-block space-x-6">
+                <a href="./projects.html" class="hover:text-[#b3b3cc]">Projects</a>
+                <a href="./experiences.html" class="hover:text-[#b3b3cc]">Experiences</a>
+                <a href="./education.html" class="hover:text-[#b3b3cc]">Education</a>
+            </div>
         </div>
     </nav>
 
@@ -48,8 +51,7 @@
         </div>
     </section>
 
-
-       <!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6 mt-auto">
         <p class="text-center">&copy; 2024 My Website</p>
     </footer>

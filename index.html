@@ -7,7 +7,60 @@
     <title>My Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script defer src="language.js"></script>
+    
+    <!-- Google Translate Widget Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,ar,ur,fr',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function changeLanguage(languageCode) {
+            var googleTranslateFrame = document.querySelector('iframe.goog-te-banner-frame');
+            if (googleTranslateFrame) {
+                googleTranslateFrame.style.display = 'none';
+            }
+            var selectElement = document.querySelector('select.goog-te-combo');
+            if (selectElement) {
+                selectElement.value = languageCode;
+                selectElement.dispatchEvent(new Event('change'));
+            }
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <style>
+        /* Hide the Google Translate UI */
+        #google_translate_element {
+            display: none;
+        }
+        .goog-logo-link, .goog-te-gadget {
+            display: none !important;
+        }
+        .goog-te-banner-frame, .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+        body {
+            top: 0 !important;
+        }
+        /* Hide the translation notice that appears at the top of the page */
+        .goog-te-banner-frame {
+            display: none !important;
+        }
+        .goog-te-balloon-frame {
+            display: none !important;
+        }
+        /* Hide the pop-up message "Translated into: ..." and "Show original" */
+        .goog-tooltip, .goog-tooltip:hover, .goog-text-highlight {
+            display: none !important;
+        }
+        .goog-te-banner-frame, .goog-te-balloon-frame {
+            display: none !important;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50 text-gray-900 font-sans">
@@ -15,39 +68,43 @@
     <!-- Navigation Bar at the Top -->
     <nav class="bg-[#33334d] text-white py-4 px-8 flex justify-between items-center">
         <div class="text-2xl font-bold">
-            <a href="./index.html" class="hover:text-[#b3b3cc] data-translate" data-translate-key="title">My Portfolio</a>
+            <a href="./index.html" class="hover:text-[#b3b3cc]">My Portfolio</a>
         </div>
-        <div class="space-x-6">
-            <a href="./projects.html" class="hover:text-[#b3b3cc]" data-translate data-translate-key="projects">Projects</a>
-            <a href="./experiences.html" class="hover:text-[#b3b3cc]" data-translate data-translate-key="experiences">Experiences</a>
-            <a href="./education.html" class="hover:text-[#b3b3cc]" data-translate data-translate-key="education">Education</a>
-            <a href="./about.html" class="hover:text-[#b3b3cc]" data-translate data-translate-key="about">About Me</a>
-            <!-- Language Selection Dropdown -->
-            <select id="languageSelect" class="bg-[#47476b] text-white py-1 px-2 rounded">
+        <!-- Custom Language Selector Dropdown -->
+        <div class="hidden md:flex space-x-6">
+            <a href="./projects.html" class="hover:text-[#b3b3cc]">Projects</a>
+            <a href="./experiences.html" class="hover:text-[#b3b3cc]">Experiences</a>
+            <a href="./education.html" class="hover:text-[#b3b3cc]">Education</a>
+            <a href="./about.html" class="hover:text-[#b3b3cc]">Skills</a>
+            <select id="languageSelect" class="bg-[#47476b] text-white py-1 px-2 rounded" onchange="changeLanguage(this.value)">
                 <option value="en">English</option>
                 <option value="ar">العربية (Arabic)</option>
                 <option value="ur">اردو (Urdu)</option>
                 <option value="fr">Français (French)</option>
             </select>
         </div>
+        <!-- Only show one link on small screens -->
+        <div class="md:hidden">
+            <a href="./about.html" class="hover:text-[#b3b3cc]">About</a>
+        </div>
     </nav>
+
+    <!-- Hidden Google Translate Element -->
+    <div id="google_translate_element"></div>
 
     <!-- Profile Header Section -->
     <header class="bg-[#47476b] text-white p-8 relative">
-        <div class="container mx-auto flex items-center space-x-8">
-            <!-- Profile Image -->
-            <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center md:space-x-8">
+            <div class="w-40 h-40 rounded-full overflow-hidden border-4 border-white mb-4 md:mb-0">
                 <img src="rim.jfif" class="w-full h-full object-cover">
             </div>
-            <!-- Profile Content -->
-            <div>
-                <h1 class="text-4xl font-bold mb-2" data-translate data-translate-key="profileName">Rimsha Aamir</h1>
-                <p class="text-lg max-w-2xl" data-translate data-translate-key="profileIntro">
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl font-bold mb-2">Rimsha Aamir</h1>
+                <p class="text-lg max-w-2xl">
                     Hi there! I'm a passionate developer and content creator with a diverse range of projects and experiences. Here's a glimpse into my work and background.
                 </p>
             </div>
         </div>
-        <!-- Social Media Icons at the End -->
         <div class="mt-6 flex justify-center space-x-4">
             <a href="https://github.com/RimshaAamir" target="_blank" class="text-white hover:text-[#ccccff] text-3xl">
                 <i class="fab fa-github"></i>
@@ -63,62 +120,62 @@
 
     <!-- Content Section -->
     <section class="bg-gray-50 py-10 px-6">
-        <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div class="container mx-auto grid grid-cols-1 gap-8 lg:grid-cols-2">
             <!-- Hobbies Section -->
             <div class="p-6 bg-white rounded-lg shadow-md">
-                <h2 class="text-2xl font-bold mb-4 text-center" data-translate data-translate-key="hobbiesTitle">Hobbies</h2>
-                <div class="flex justify-center space-x-6">
+                <h2 class="text-2xl font-bold mb-4 text-center">Hobbies</h2>
+                <div class="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-3 text-center">
                     <div class="flex flex-col items-center">
                         <i class="fas fa-pen-nib text-3xl text-[#4d4d99]"></i>
-                        <p data-translate data-translate-key="hobbyWriting">Writing</p>
+                        <p>Writing</p>
                     </div>
                     <div class="flex flex-col items-center">
                         <i class="fas fa-bicycle text-3xl text-[#4d4d99]"></i>
-                        <p data-translate data-translate-key="hobbyCycling">Cycling</p>
+                        <p>Cycling</p>
                     </div>
                     <div class="flex flex-col items-center">
                         <i class="fas fa-futbol text-3xl text-[#4d4d99]"></i>
-                        <p data-translate data-translate-key="hobbyFootball">Football</p>
+                        <p>Football</p>
                     </div>
                     <div class="flex flex-col items-center">
                         <i class="fas fa-film text-3xl text-[#4d4d99]"></i>
-                        <p data-translate data-translate-key="hobbyMovies">Movies</p>
+                        <p>Movies</p>
                     </div>
                     <div class="flex flex-col items-center">
                         <i class="fas fa-plane text-3xl text-[#4d4d99]"></i>
-                        <p data-translate data-translate-key="hobbyTravel">Travel</p>
+                        <p>Travel</p>
                     </div>
                     <div class="flex flex-col items-center">
                         <i class="fas fa-gamepad text-3xl text-[#4d4d99]"></i>
-                        <p data-translate data-translate-key="hobbyGames">Games</p>
+                        <p>Games</p>
                     </div>
                 </div>
             </div>
 
             <!-- Skills Section -->
             <div class="p-6 bg-white rounded-lg shadow-md">
-                <h2 class="text-2xl font-bold mb-4 text-center" data-translate data-translate-key="skillsTitle">Skills</h2>
+                <h2 class="text-2xl font-bold mb-4 text-center">Skills</h2>
                 <div class="space-y-4">
                     <div class="flex justify-between">
-                        <p data-translate data-translate-key="skillWriting">Content Writing</p>
+                        <p>Content Writing</p>
                         <div class="w-3/4 bg-gray-300 h-2 rounded-lg">
                             <div class="bg-[#6666b2] h-2 rounded-lg" style="width: 80%;"></div>
                         </div>
                     </div>
                     <div class="flex justify-between">
-                        <p data-translate data-translate-key="skillSEO">SEO-Optimization</p>
+                        <p>SEO-Optimization</p>
                         <div class="w-3/4 bg-gray-300 h-2 rounded-lg">
                             <div class="bg-[#6666b2] h-2 rounded-lg" style="width: 70%;"></div>
                         </div>
                     </div>
                     <div class="flex justify-between">
-                        <p data-translate data-translate-key="skillDesign">Web Design</p>
+                        <p>Web Design</p>
                         <div class="w-3/4 bg-gray-300 h-2 rounded-lg">
                             <div class="bg-[#6666b2] h-2 rounded-lg" style="width: 90%;"></div>
                         </div>
                     </div>
                     <div class="flex justify-between">
-                        <p data-translate data-translate-key="skillDevelopment">Web Development</p>
+                        <p>Web Development</p>
                         <div class="w-3/4 bg-gray-300 h-2 rounded-lg">
                             <div class="bg-[#6666b2] h-2 rounded-lg" style="width: 85%;"></div>
                         </div>
@@ -130,7 +187,7 @@
 
     <!-- Footer Section -->
     <footer class="bg-[#47476b] text-white text-center py-6">
-        <p class="text-sm" data-translate data-translate-key="footerText">&copy; 2024 My Portfolio | Made with passion and Tailwind CSS</p>
+        <p class="text-sm">&copy; 2024 My Portfolio | Made with passion and Tailwind CSS</p>
     </footer>
 
 </body>
