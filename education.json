@@ -1,0 +1,23 @@
+{
+    "education": [
+      {
+        "iconClass": "fas fa-laptop-code text-4xl",
+        "title": "Information Technology University",
+        "degree": "Bachelor of Computer Science",
+        "years": "2020 - 2025"
+      },
+      {
+        "iconClass": "fas fa-chalkboard-teacher text-4xl",
+        "title": "Lahore College For Women University",
+        "degree": "Fsc Pre-Engineering",
+        "years": "2019 - 2021"
+      },
+      {
+        "iconClass": "fas fa-pencil-alt text-4xl",
+        "title": "Allied Schools",
+        "degree": "Matriculation",
+        "years": "2017 - 2019"
+      }
+    ]
+  }
+  

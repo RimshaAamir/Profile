@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+     <!-- <link rel="stylesheet" href="./src/output.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -24,45 +25,56 @@
     <section class="py-16 bg-[#f5f5f5]">
         <div class="max-w-6xl mx-auto px-4">
             <h2 class="text-4xl font-bold text-center mb-12 text-[#33334d]">Education</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-
-                <!-- Web Development Internship -->
-                <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
-                    <div class="text-[#4d4d99] mb-4">
-                        <i class="fas fa-laptop-code text-4xl"></i> <!-- Laptop code icon for web development -->
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-2">Information Technology University</h3>
-                    <p class="text-gray-600">Bachelor of Computer Science</p>
-                    <p class="text-gray-600 font-semibold">2020 - 2025</p>
-                </div>
-
-                <!-- Teaching Assistant Role -->
-                <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
-                    <div class="text-[#4d4d99] mb-4">
-                        <i class="fas fa-chalkboard-teacher text-4xl"></i> <!-- Teacher icon for the teaching role -->
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-2">Lahore College For Women University</h3>
-                    <p class="text-gray-600">Fsc Pre-Engineering</p>
-                    <p class="text-gray-600 font-semibold">2019 - 2021</p>
-                </div>
-
-                <!-- Content Writing Job -->
-                <div class="bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
-                    <div class="text-[#4d4d99] mb-4">
-                        <i class="fas fa-pencil-alt text-4xl"></i> <!-- Pencil icon for content writing -->
-                    </div>
-                    <h3 class="text-2xl font-semibold mb-2">Allied Schools</h3>
-                    <p class="text-gray-600">Matriculation</p>
-                    <p class="text-gray-600 font-semibold">2017 - 2019</p>
-                </div>
-
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center" id="cards-container">
+                <!-- Cards will be injected here dynamically -->
             </div>
+            
+
+            
         </div>
     </section>
 
     <footer class="bg-[#47476b] text-white text-center py-7 pb-12">
         <p class="text-sm">&copy; 2024 My Portfolio</p>
     </footer>
+
+    
+     <script>
+            // Fetch data from a local JSON file
+        fetch('education.json')
+        .then(response => response.json())  // Parse the JSON data
+        .then(data => {
+            // Access the cards data from the JSON
+            const education = data.education;
+
+            // Get the container where the cards will be inserted
+            const cardsContainer = document.getElementById('cards-container');
+
+            // Iterate over the array of cards and generate the HTML for each
+            education.forEach(edu => {
+            const cardElement = document.createElement('div');
+            cardElement.className = 'bg-white p-6 rounded-lg shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl';
+
+            // Insert the content for each card dynamically
+            cardElement.innerHTML = `
+                <div class="text-[#4d4d99] mb-4">
+                <i class="${edu.iconClass}"></i>
+                </div>
+                <h3 class="text-2xl font-semibold mb-2">${edu.title}</h3>
+                <p class="text-gray-600">${edu.degree}</p>
+                <p class="text-gray-600 font-semibold">${edu.years}</p>
+            `;
+
+            // Append the card to the container
+            cardsContainer.appendChild(cardElement);
+            });
+        })
+        .catch(error => console.error('Error fetching the JSON data:', error));
+
+
+
+
+    </script>
 
 </body>
 
