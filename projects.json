@@ -1,0 +1,35 @@
+{
+    "projects": [
+      {
+        "image": "./src/images/gaming.jpg",
+        "title": "Snake Game",
+        "description": "Thoroughly learnt the basics of computer fundamental programming and created a multiplayer snake game.",
+        "link": "https://github.com/RimshaAamir"
+      },
+      {
+        "image": "./src/images/solar.jpg",
+        "title": "Solar-Lite (MERN, 2024 - In Progress)",
+        "description": "I'm contributing to the development of a customizable green energy platform, bringing an entrepreneurial idea to life with a web application.",
+        "link": "https://github.com/RimshaAamir"
+      },
+      {
+        "image": "./src/images/flutterapp.jpg",
+        "title": "Flutter Full Stack Application (2023)",
+        "description": "I created a Flutter app called 'Here You Grow' in my 4th semester, enhancing my skills in Flutter, Dart, Firebase, and NoSQL databases.",
+        "link": "https://github.com/RimshaAamir"
+      },
+      {
+        "image": "./src/images/chess.jpg",
+        "title": "Shogi (C++, OOP, BGI 2010, 2023)",
+        "description": "A chess shogi game built using C++, focusing on abstract concepts and the power of OOP.",
+        "link": "https://github.com/RimshaAamir"
+      },
+      {
+        "image": "./src/images/weather.jpg",
+        "title": "Weather App | NextJs | React | Tailwind",
+        "description": "Built a weather app using React, Tailwind CSS, ESLint, JavaScript, TypeScript, and HTML, featuring real-time weather updates and a clean, responsive interface.",
+        "link": "https://github.com/RimshaAamir"
+      }
+    ]
+  }
+  
