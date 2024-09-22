@@ -1,0 +1,29 @@
+{
+    "experiences": [
+      {
+        "title": "Web Development Intern at DeltaLabs",
+        "category": "Internship",
+        "date": "June 2024 - Present",
+        "description": "Contributed to the development of a company website using HTML, CSS, JavaScript, and React.js.",
+        "image": "./src/images/intern.jpg",
+        "alt": "Web Development Internship"
+      },
+      {
+        "title": "Teaching Assistant at IT University",
+        "category": "Job",
+        "date": "September 2024",
+        "description": "Assisted professors in delivering course materials and mentoring students in web development.",
+        "image": "./src/images/office-workers-working-together-as-team.jpg",
+        "alt": "Teaching Assistant"
+      },
+      {
+        "title": "Senior Content Writer at Pen-Slingers",
+        "category": "Job",
+        "date": "June 2023 - Present",
+        "description": "Created high-quality content for a variety of clients, focusing on SEO optimization and storytelling.",
+        "image": "./src/images/photo-female-office-worker-sitting-desk-with-laptop-clipboard-high-quality-photo.jpg",
+        "alt": "Content Writing"
+      }
+    ]
+  }
+  
